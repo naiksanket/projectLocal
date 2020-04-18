@@ -4,15 +4,14 @@
   "description": "App view project-local",
   "dependencies": {
     "lodash.template": "^4.5.0",
-    "minimist": ">=1.2.3"
+    "minimist": ">=1.2.3",
+    "kind-of": ">=6.0.3"
   },
   "devDependencies": {
     "@ionic/v1-toolkit": "^1.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0",
-    "lodash.template": "^4.5.0",
-    "kind-of": ">=6.0.3"
+    "gulp-sass": "^3.1.0"
   }
 }
