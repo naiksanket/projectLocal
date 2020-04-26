@@ -1,17 +1,41 @@
 {
-  "name": "projectLocalApp",
+  "name": "projectlocalapp",
   "version": "0.0.1",
   "description": "App view project-local",
   "dependencies": {
+    "lodash": ">=4.17.15",
     "lodash.template": "^4.5.0",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.5",
     "kind-of": ">=6.0.3"
   },
   "devDependencies": {
-    "@ionic/v1-toolkit": "^1.0.0",
+    "@ionic/v1-toolkit": "^3.1.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0"
-  }
+    "gulp-sass": "^4.1.0"
+  },
+  "resolutions": {
+    "minimatch": "3.0.4",
+    "minimist": "1.2.5",
+    "lodash": ">=4.17.15"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naiksanket/projectLocal.git"
+  },
+  "keywords": [
+    "local"
+  ],
+  "author": "sanketn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naiksanket/projectLocal/issues"
+  },
+  "homepage": "https://github.com/naiksanket/projectLocal#readme"
 }
