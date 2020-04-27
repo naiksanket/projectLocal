@@ -2,40 +2,96 @@
   "name": "projectlocalapp",
   "version": "0.0.1",
   "description": "App view project-local",
-  "dependencies": {
-    "lodash": ">=4.17.15",
-    "lodash.template": "^4.5.0",
-    "minimist": ">=1.2.5",
-    "kind-of": ">=6.0.3"
-  },
+  "homepage": "https://github.com/naiksanket/projectLocal#readme",
+  "author": "sanketn",
+  "files": [
+    "lib"
+  ],
+  "main": "gulpfile.js",
+  "keywords": [
+    "local"
+  ],
   "devDependencies": {
     "@ionic/v1-toolkit": "^3.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-config-xo": "^0.27.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "husky": "^3.0.9",
+    "jest": "^25.4.0",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "kind-of": ">=6.0.3",
+    "lodash": ">=4.17.15",
+    "lodash.template": "^4.5.0",
+    "minimist": ">=1.2.5",
+    "typescript": "^3.8.3"
   },
   "resolutions": {
     "minimatch": "3.0.4",
     "minimist": "1.2.5",
     "lodash": ">=4.17.15"
   },
-  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0 && jest",
     "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/naiksanket/projectLocal.git"
   },
-  "keywords": [
-    "local"
-  ],
-  "author": "sanketn",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/naiksanket/projectLocal/issues"
   },
-  "homepage": "https://github.com/naiksanket/projectLocal#readme"
+  "lint-staged": {
+    "*.js": [
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
